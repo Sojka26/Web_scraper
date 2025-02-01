@@ -1,3 +1,6 @@
+'Marek Sojka'
+'mara1x@email.cz'
+'Marek98'
 from pprint import pprint
 import os
 import csv

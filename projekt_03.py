@@ -194,11 +194,11 @@ def csv_file_creation(codes_names_links) -> None:
             writer = csv.writer(f)
             writer.writerow(csv_head)
 
-            for y in codes_names_links:
-                url2 = 'https://www.volby.cz/pls/ps2017nss/' + y[2]
+            for index in codes_names_links:
+                url2 = 'https://www.volby.cz/pls/ps2017nss/' + index[2]
                 soup = soup_response(url2)
                 results = result_connect(soup)
-                writer.writerow([y[0], y[1]] + results)
+                writer.writerow([index[0], index[1]] + results)
                 os.system('cls')
         saved_message(file_name)
     except IndexError:

@@ -224,6 +224,7 @@ def main():
     """
     try:
         codes_names_links = list_of_all_regions()
+        print('Zpracovavam data')
         csv_file_creation(codes_names_links)
     except Exception as e:
         logging.error("An error occurred in the main function: %s", e)
